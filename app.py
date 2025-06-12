@@ -1,25 +1,15 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import requests
-import io
-import os
+import sys
 
-# Укажите здесь путь к локальному файлу или URL модели
-MODEL_PATH_OR_URL = 'mobile_price_model.pkl'  # или 'https://example.com/path/to/model.pkl'
+# Импортируйте все необходимые модули, используемые при обучении модели
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
 
-def load_model(path_or_url):
-    if os.path.isfile(path_or_url):
-        # Загружаем из файла
-        return joblib.load(path_or_url)
-    else:
-        # Предполагаем, что это URL
-        response = requests.get(path_or_url)
-        response.raise_for_status()  # Проверка успешности запроса
-        return joblib.load(io.BytesIO(response.content))
-
-# Загружаем модель один раз при запуске приложения
-model = load_model(MODEL_PATH_OR_URL)
+# Затем загрузите модель
+model = joblib.load('mobile_price_model.pkl')
 
 st.title("Определение ценового диапазона мобильного телефона")
 
