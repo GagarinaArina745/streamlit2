@@ -6,7 +6,7 @@
 
 ### Использованный датасет
 Был использован датасет **Mobile Price Classification** c 'Kaggle'.<br>
-[Ссылка на Kaggle](https://www.kaggle.com/datasets/orvile/health-and-sleep-relation-2024/data](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification))
+[Ссылка на Kaggle](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification))
 
 ## Лицензия
 Проект в данном репозитории лицензируется по `MIT`.
