@@ -1,7 +1,14 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import requests
 
+# URL вашей модели на внешнем хранилище
+model_url = 'https://storage.googleapis.com/your-bucket/mobile_price_model.pkl'
+response = requests.get(model_url)
+
+with open('mobile_price_model.pkl', 'wb') as f:
+    f.write(response.content)
 # Загрузка обученной модели
 model = joblib.load('mobile_price_model.pkl')
 
