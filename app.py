@@ -1,12 +1,9 @@
 import streamlit as st
-import pandas as pd
-import joblib
-import sys
-
-# Импортируйте все необходимые модули, используемые при обучении модели
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
+import joblib
+import sys
 
 # Затем загрузите модель
 model = joblib.load('mobile_price_model.pkl')
